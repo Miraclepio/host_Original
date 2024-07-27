@@ -62,7 +62,7 @@ const signUpUser = async (req, res) => {
 
         await sendEmail(mailOptions);
 
-        return res.status(200).json({ message: "Successful, please check your email to verify your account",token });
+        return res.status(200).json({ message: "Successful, please check your email to verify your account",token ,user});
     } catch (error) {
         return res.status(500).json(error.message);
     }
